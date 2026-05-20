@@ -1,3 +1,3 @@
-function myFunction(x) {
-  x.classList.toggle("fa-thumbs-down");
+function changeColor(x, color) {
+    x.style.color = color;
 }
