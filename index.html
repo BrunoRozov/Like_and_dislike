@@ -14,26 +14,41 @@
 
 <body>
     <header>
-        <section>
-    <div class="content">
-        <div class="content1">
+                <section>
+            <div class="content">
+                <div class="content1">
 
-            <p>Wow see video oli nii lahe</p>
+                    <p>Wow see video oli nii lahe</p>
 
-            <div class="like">
-                <i onclick="changeColor(this, 'green')"
-                class="fa fa-thumbs-up"></i>
+                    <div class="like">
+                        <i onclick="changeColor(this, 'green')"
+                        class="fa fa-thumbs-up"></i>
 
-                <i onclick="changeColor(this, 'red')"
-                class="fa fa-thumbs-down"></i>
+                        <i onclick="changeColor(this, 'red')"
+                        class="fa fa-thumbs-down"></i>
+                    </div>
+
+                </div>
             </div>
+        </section>
+    
 
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <h2>Dislike</h2>
+                <p>Miks sulle video ei meeldinud?</p>
+                
+                <textarea placeholder="Kirjuta siia oma tagasiside..."></textarea>
+                
+                <div class="saada">
+                    <button>Saada</button>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
     </header>
     
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
