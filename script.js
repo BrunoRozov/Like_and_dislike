@@ -8,6 +8,8 @@ const closeThank         = document.getElementById("closeThank");
 const closeThankModalBtn = document.getElementById("closeThankBtn");
 
 
+console.log("✅ Essa!");
+
 let buttons = [];
 
 function initButtons() {
@@ -73,3 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
         closeThank: !!closeThank
     });
 });
+
+
