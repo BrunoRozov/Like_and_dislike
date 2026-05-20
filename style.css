@@ -1,0 +1,58 @@
+.body{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content {
+  width: 300px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34373a;
+  border-radius: 8px;
+  padding: 20px;
+  background: linear-gradient(135deg, #78acff, #377EFA);
+  background-size: 400% 400%;
+  animation: ICE 18s ease infinite;
+  margin: 400px auto;
+}
+
+.content::before,
+.content::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 16px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    animation: wave 25s linear infinite;
+    opacity: 0.6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content::after {
+    width: 260px;
+    height: 260px;
+    border: 10px solid rgba(255, 255, 255, 0.08);
+    animation-duration: 32s;
+    animation-direction: reverse;
+    opacity: 0.4;
+}
+
+.like {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 102, 255, 0.4);
+    background: linear-gradient(135deg, #0052cc, #0088ff);
+    border-radius: 16px;
+}
+
+.like:active {
+  transform: scale(0.97);
+}
