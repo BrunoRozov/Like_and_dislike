@@ -135,11 +135,19 @@ body {
 .modal-content {
     background: white;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 16px;
     width: 300px;
+    height: auto;
     text-align: center;
+    animation: popup 0.3s ease;
+}
 
-    animation: popup 0.2s ease;
+.modal-content textarea {
+    width: 75%;          
+    height: 100px;         
+    min-height: 120px;     
+    max-height: 300px;     
+    resize: vertical;      
 }
 
 .close {
@@ -203,4 +211,28 @@ body {
 
 .saada button:active {
     transform: scale(0.96);
+}
+
+.thank-content {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.thank-content h2 {
+    color: #0066ff;
+    margin-bottom: 15px;
+}
+
+.thank-content p {
+    margin: 10px 0;
+    font-size: 1.05rem;
+}
+
+/* Sama nupu stiil, aga roheline variant */
+#closeThankBtn {
+        background: linear-gradient(135deg, #0052cc, #0088ff);
+}
+
+#closeThankBtn:hover {
+    background: linear-gradient(135deg, #0052cc, #0088ff);
 }

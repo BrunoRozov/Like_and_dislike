@@ -1,42 +1,75 @@
-const modal = document.getElementById("myModal");
-const closeBtn = document.querySelector(".close");
+const dislikeModal = document.getElementById("myModal");
+const thankModal   = document.getElementById("thankModal");
 
-// Cache all buttons once
+
+const saadaBtn           = document.getElementById("saadaBtn");
+const closeDislike       = document.getElementById("closeDislike");
+const closeThank         = document.getElementById("closeThank");
+const closeThankModalBtn = document.getElementById("closeThankBtn");
+
+
 let buttons = [];
 
-// Initialize buttons
 function initButtons() {
     buttons = document.querySelectorAll(".fa");
 }
 
+
 function changeColor(x, color) {
-    // Reset all buttons
     buttons.forEach(btn => {
         btn.style.color = "";
         btn.style.transform = "scale(1)";
         btn.dataset.active = "false";
     });
 
-    // Activate the clicked one
     x.style.color = color;
     x.style.transform = "scale(1.3)";
     x.dataset.active = "true";
 
-    if (color === "red") {
-        modal.style.display = "flex";
+    if (color === "red" && dislikeModal) {
+        dislikeModal.style.display = "flex";
     }
 }
 
-// Close modal handlers
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+if (saadaBtn) {
+    saadaBtn.addEventListener("click", () => {
+        if (dislikeModal) dislikeModal.style.display = "none";
+        if (thankModal) thankModal.style.display = "flex";
+    });
+}
+
+
+if (closeDislike) {
+    closeDislike.addEventListener("click", () => {
+        dislikeModal.style.display = "none";
+    });
+}
+
+if (closeThank) {
+    closeThank.addEventListener("click", () => {
+        thankModal.style.display = "none";
+    });
+}
+
+if (closeThankModalBtn) {
+    closeThankModalBtn.addEventListener("click", () => {
+        thankModal.style.display = "none";
+    });
+}
 
 window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
+    if (e.target === dislikeModal) dislikeModal.style.display = "none";
+    if (e.target === thankModal) thankModal.style.display = "none";
 });
 
-// Better: Run initialization when DOM is ready
-document.addEventListener("DOMContentLoaded", initButtons);
+document.addEventListener("DOMContentLoaded", () => {
+    initButtons();
+    
+    console.log({
+        dislikeModal: !!dislikeModal,
+        thankModal: !!thankModal,
+        saadaBtn: !!saadaBtn,
+        closeDislike: !!closeDislike,
+        closeThank: !!closeThank
+    });
+});

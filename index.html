@@ -14,7 +14,7 @@
 
 <body>
     <header>
-                <section>
+        <section>
             <div class="content">
                 <div class="content1">
 
@@ -32,21 +32,42 @@
             </div>
         </section>
     
-
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                
-                <h2>Dislike</h2>
-                <p>Miks sulle video ei meeldinud?</p>
-                
-                <textarea placeholder="Kirjuta siia oma tagasiside..."></textarea>
-                
-                <div class="saada">
-                    <button>Saada</button>
+        <section>
+            <!-- Dislike Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeDislike">&times;</span>
+                    
+                    <h2>Dislike</h2>
+                    <p>Miks sulle video ei meeldinud?</p>
+                    
+                    <div class="textarea">
+                        <textarea placeholder="Kirjuta siia oma tagasiside..."></textarea>
+                    </div>
+                    
+                    <div class="saada">
+                        <button id="saadaBtn">Saada</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <!-- Thank You Modal -->
+            <div id="thankModal" class="modal">
+                <div class="modal-content thank-content">
+                    <span class="close" id="closeThank">&times;</span>
+                    
+                    <h2>Aitäh!</h2>
+                    <p>Sinu tagasiside on vastu võetud.</p>
+                    
+                    <div class="saada">
+                        <button id="closeThankBtn">Sulge</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </header>
     
 <script src="script.js"></script>
